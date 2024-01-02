@@ -6,15 +6,15 @@ const cors = require('cors');
 const app = exrpress()
 app.use(exrpress.json());
 app.use(cors());
-// app.use(cors({
-//     origin: [""],
-//     methods: ["POST", 'GET'],
-//     credentials: true
-// }));
+app.use(cors({
+    origin: ["https://ramesh-projects-cliebt.vercel.app"],
+    methods: ["POST", 'GET'],
+    credentials: true
+}));
 
-// app.get('/', (req, res) => {
-//     res.json("hello")
-// })
+app.get('/', (req, res) => {
+    res.json("hello")
+})
 app.post('/user', async (req, res) => {
 
     try {
